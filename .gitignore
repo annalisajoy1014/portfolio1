@@ -7,3 +7,4 @@ dist/
 *.log
 *:Zone.Identifier
 install-gh.sh
+.vercel
