@@ -1,0 +1,203 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectGrid from "../components/ProjectGrid.jsx";
+
+const projects = [
+  {
+    href: "/web-of-choices",
+    title: "The Web of Choices",
+    tagline: "Weaving together the hidden inevitabilities",
+    cover: "/images/web-of-choices/tenebranox-house-part-2-284aa8.jpg",
+  },
+  {
+    href: "/atlas-of-worlds",
+    title: "The Atlas of Worlds, and The Chorus of Voices",
+    tagline:
+      "A brief glimpse into some of the places and characters designed to evoke player engagement and emotional investment",
+    cover: "/images/atlas-of-worlds/luxon-dream-bc1962.jpg",
+  },
+  {
+    href: "/narrative-systems--implementation",
+    title: "Narrative Systems & Implementation",
+    tagline: "Where writing creates meaning, design gives it consequence.",
+    cover: "/images/site/narrative-design-bb06b4.jpg",
+  },
+  {
+    href: "/examples",
+    title: "Featured Examples",
+    tagline:
+      "Highlights of my design decisions, process, and structure in the pillars of narrative structure: a place, a faction, and a character",
+    cover: "/images/site/examples-background-845b71.png",
+  },
+];
+---
+
+<Layout title="Portfolio Overview - Annalisa Ard Narrative Designer RPG Architect">
+  <section class="section cover hero">
+    <div class="cover-bg" style="background-image: url('/images/site/anand-b5f0ea.png');"></div>
+    <div class="cover-overlay"></div>
+    <h1>A Narrative Design Portfolio</h1>
+  </section>
+
+  <section class="section centered philosophy">
+    <h2 class="philosophy-heading">Design Philosophy</h2>
+    <div class="long-text philosophy-body">
+      <p>I build worlds that breathe.</p>
+      <p>
+        Across 1,500 hours of storytelling and 400 pages per world of original
+        lore, I create narratives that evolve through choice, emotion, and
+        consequence. As Campaign Director and Narrative Designer, I craft
+        branching arcs and living worlds where every decision leaves a mark.
+      </p>
+      <p>
+        My work thrives at the intersection of structure and spontaneity —
+        where planning meets discovery, and story becomes experience. Through
+        collaborative storytelling and long-form design, I explore how
+        character, tension, and empathy shape meaningful worlds.
+      </p>
+      <p>
+        This portfolio is a study in interactive emotion: transforming
+        imagination into experience, and experience into story — one decision
+        at a time.
+      </p>
+    </div>
+  </section>
+
+  <section class="section portfolio-section">
+    <h1>Portfolio</h1>
+    <ProjectGrid client:load projects={projects} />
+  </section>
+
+  <section class="section two-col left-has-margin contact-section">
+    <div class="contact-left">
+      <p class="long-text">
+        I'm always happy to <strong>connect</strong>. Reach out with questions,
+        ideas, or project inquiries.
+      </p>
+      <ul class="tag-list">
+        <li>annalisa.j.ard@gmail.com</li>
+        <li>+1 (626) 696-6147</li>
+      </ul>
+    </div>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submission not yet wired up — see TODO note.');">
+      <label>
+        <span class="sr-only">Your name</span>
+        <input type="text" name="name" placeholder="Your name" required />
+      </label>
+      <label>
+        <span class="sr-only">Your email</span>
+        <input type="email" name="email" placeholder="Your email" required />
+      </label>
+      <label>
+        <span class="sr-only">Your message</span>
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="button">Send</button>
+    </form>
+  </section>
+
+  <section class="section two-col closer-section">
+    <p class="long-text">
+      Ideas become clearer when shaped with intention. I create work that
+      speaks with purpose, emotion, and attention to detail.
+    </p>
+    <p class="short-text closer-right">Let's get started on your next project</p>
+  </section>
+</Layout>
+
+<style>
+  .hero h1 {
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+  .philosophy {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+  }
+  .philosophy-heading {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 0.7em;
+    text-align: center;
+    max-width: 800px;
+  }
+  .philosophy-body {
+    text-align: left;
+    max-width: 800px;
+  }
+  .philosophy-body p {
+    margin: 0 0 1em;
+  }
+  .portfolio-section {
+    padding-top: 8vh;
+    padding-bottom: 4vh;
+  }
+  .portfolio-section h1 {
+    max-width: 800px;
+    margin: 0 0 0.7em;
+  }
+  .contact-section {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+  .contact-left .long-text {
+    margin-bottom: 1.1em;
+    text-align: left;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    width: 100%;
+  }
+  .contact-form label {
+    display: block;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.3em;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.8em 1em;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.14);
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 6em;
+  }
+  .contact-form .button {
+    align-self: flex-start;
+  }
+  .closer-right {
+    text-align: right;
+    align-self: flex-end;
+  }
+  @media (max-width: 800px) {
+    .closer-right {
+      text-align: left;
+      align-self: flex-start;
+    }
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+</style>

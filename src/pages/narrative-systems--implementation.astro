@@ -1,0 +1,339 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const stages = [
+  {
+    title: "Concept → Narrative Pillars",
+    subtitle:
+      "Establish the emotional architecture and gameplay purpose of each story.",
+    description:
+      "Example: In Androlynne, the pillars of hope, sacrifice, and corruption informed every environmental and mechanical reaction.",
+  },
+  {
+    title: "Design Documentation → System Translation",
+    subtitle:
+      "Convert story concepts into actionable design: quest logic, state changes, condition maps, and emotional objectives.",
+    description:
+      "Deliverables: narrative bibles, tone sheets, branching maps, dialogue flowcharts, and implementation-ready summaries for design teams.",
+  },
+  {
+    title: "Integration → Tools & Prototyping",
+    subtitle:
+      "Build and iterate narrative systems using tools like Twine or Unreal Blueprint logic.",
+    description:
+      "Focus on state-based triggers and reactivity loops that make emotional beats tangible.",
+  },
+  {
+    title: "Iteration → Cross-Team Feedback",
+    subtitle:
+      "Work collaboratively with level design, gameplay, and QA to refine pacing, clarity, and consequence visibility.",
+    description:
+      "Each iteration tightens the feedback loop between what the player feels and what the world does.",
+  },
+];
+
+const systemCols = [
+  {
+    title: "Tools & Pipelines",
+    items: [
+      "Player compassion",
+      "Player betrayal",
+      "Moral indecision",
+      "Emotional exhaustion",
+    ],
+  },
+  {
+    title: "Systemic Translation",
+    items: [
+      "State variable: empathy +1",
+      "State variable: reputation -2",
+      "Latent timer triggers",
+      "Hidden fatigue metric",
+    ],
+  },
+  {
+    title: "Example Outcome",
+    items: [
+      "NPCs open new dialogue routes; environment calms",
+      "Ally faction AI changes patrol patterns",
+      "NPC hesitation dialogue; pacing shift",
+      "World lighting fades; music changes dynamically",
+    ],
+  },
+];
+---
+
+<Layout
+  title="Narrative Systems & Implementation — Annalisa Ard"
+  description="How story, design, and systems interlock to create reactivity and consequence."
+>
+  <section class="section ns-heading">
+    <h1>Narrative Systems & Implementation</h1>
+  </section>
+
+  <section class="section ns-intro two-col">
+    <p class="long-text">
+      Narrative design is the craft of making story playable. My
+      implementation process focuses on translating emotional arcs into
+      mechanical reactivity — ensuring that narrative choices alter gameplay
+      state, perception, and consequence. From documentation to tool
+      integration, my approach bridges creative intent with systemic function.
+    </p>
+    <h2 class="ns-subtitle">
+      How story, design, and systems interlock to create reactivity and
+      consequence
+    </h2>
+  </section>
+
+  <section class="section ns-process">
+    <h2>My Implementation Process</h2>
+    <p class="process-lede">
+      I treat narrative development as an iterative design pipeline, not a
+      linear scriptwriting process. Each stage ensures that creative intent
+      survives implementation and becomes meaningful gameplay.
+    </p>
+    <ol class="stage-list">
+      {
+        stages.map((s) => (
+          <li class="stage">
+            <h3>{s.title}</h3>
+            <p class="stage-subtitle">{s.subtitle}</p>
+            <p class="stage-description">{s.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="section ns-systemic">
+    <h2>Systemic Design Approach</h2>
+    <p class="systemic-lede">
+      In my workflow, every narrative decision connects to a system-level
+      behavior. This ensures <em>emotional logic = game logic</em>.
+    </p>
+
+    <div class="systemic-cols">
+      {
+        systemCols.map((col) => (
+          <div class="systemic-col">
+            <h3>{col.title}</h3>
+            <ul>
+              {col.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section ns-closer">
+    <p class="closer-lede">
+      The goal is always to connect emotional player experience to systemic
+      visibility.
+    </p>
+    <ul class="closer-bullets">
+      <li>
+        A companion hesitates mid-battle because of trust states, not just
+        dialogue flags.
+      </li>
+      <li>
+        A secret faction evolves as a simulation of power, not just a series
+        of fetch quests.
+      </li>
+      <li>
+        Lighting changes color just not because of code, but because the
+        player made a moral choice.
+      </li>
+    </ul>
+    <p class="closer-body">
+      That's the heart of my process: transforming emotion into interaction,
+      and story into system. My process builds worlds that react, characters
+      that remember, and stories that evolve through play — not exposition.
+    </p>
+    <p class="closer-final">
+      Because in the end, the best stories aren't told. They're played.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .ns-heading {
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .ns-heading h1 {
+    max-width: 800px;
+    margin: 0;
+  }
+  .ns-intro {
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .ns-intro .long-text {
+    max-width: 800px;
+    text-align: left;
+  }
+  .ns-subtitle {
+    font-size: 1.68em;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 800px;
+    align-self: flex-start;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+  }
+
+  .ns-process {
+    padding: 8vh 5%;
+    text-align: center;
+  }
+  .ns-process h2 {
+    font-size: 2.3em;
+    margin-bottom: 0.7em;
+  }
+  .process-lede {
+    font-size: 1.7em;
+    line-height: 1.5;
+    margin: 0 auto 2em;
+    max-width: 1100px;
+    color: rgba(255, 255, 255, 0.92);
+  }
+  .stage-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+    display: grid;
+    gap: 1.5em;
+    text-align: left;
+  }
+  .stage {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 0.5em;
+    padding: 1.5em 1.8em;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+  .stage:hover {
+    background: rgba(137, 122, 225, 0.08);
+    border-color: rgba(137, 122, 225, 0.45);
+    transform: translateY(-2px);
+  }
+  .stage h3 {
+    font-size: 1.45em;
+    margin: 0 0 0.4em;
+    color: var(--accent);
+  }
+  .stage-subtitle {
+    font-size: 1.15em;
+    margin: 0 0 0.5em;
+    line-height: 1.5;
+  }
+  .stage-description {
+    font-size: 1em;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .ns-systemic {
+    padding: 6vh 5%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .ns-systemic h2 {
+    font-size: 2.3em;
+    margin-bottom: 0.4em;
+  }
+  .systemic-lede {
+    font-size: 1.7em;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 2em;
+  }
+  .systemic-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+  }
+  @media (max-width: 800px) {
+    .systemic-cols {
+      grid-template-columns: 1fr;
+    }
+  }
+  .systemic-col h3 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--border);
+  }
+  .systemic-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .systemic-col li {
+    padding: 0.6em 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 1.05em;
+  }
+  .systemic-col li:last-child {
+    border-bottom: none;
+  }
+
+  .ns-closer {
+    padding: 6vh 5% 10vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .closer-lede {
+    font-size: 1.6em;
+    margin-bottom: 1em;
+  }
+  .closer-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 2em;
+    max-width: 700px;
+    text-align: left;
+  }
+  .closer-bullets li {
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin-bottom: 0.7em;
+    padding-left: 1.5em;
+    position: relative;
+  }
+  .closer-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.4em;
+    line-height: 1;
+    top: 0.05em;
+  }
+  .closer-body {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.92);
+  }
+  .closer-final {
+    font-size: 1.5em;
+    font-style: italic;
+    color: var(--accent);
+    margin-top: 2em;
+  }
+</style>

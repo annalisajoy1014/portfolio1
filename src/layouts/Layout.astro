@@ -1,0 +1,110 @@
+---
+import Nav from "../components/Nav.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  hideFooter?: boolean;
+}
+
+const {
+  title = "Annalisa Ard — Narrative Designer & RPG Architect",
+  description = "Narrative designer with branching storyline in game design. Player-centered and user-centered RPG writer and scripter for immersive and meaningful engagement with roleplaying games and CRPG games.",
+  hideFooter = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <slot />
+    </main>
+
+    {
+      !hideFooter && (
+        <footer class="site-footer">
+          <section class="section cover footer-cover">
+            <div
+              class="cover-bg"
+              style="background-image: url('/images/atlas-of-worlds/forest-mountains-be20f7.png');"
+            />
+            <div class="footer-inner">
+              <h2>Connect with me:</h2>
+              <div class="footer-card">
+                <p><strong>Annalisa Ard</strong></p>
+                <p>Tucson, Arizona | Remote</p>
+                <p>Phone: <a href="tel:+16266966147">+1 (626) 696-6147</a></p>
+                <p><a href="mailto:annalisa.j.ard@gmail.com">annalisa.j.ard@gmail.com</a></p>
+              </div>
+              <p class="copyright">&copy; Annalisa Ard. All rights reserved.</p>
+            </div>
+          </section>
+        </footer>
+      )
+    }
+
+    <style>
+      .site-footer {
+        background: #000;
+      }
+      .footer-cover {
+        min-height: 60vh;
+      }
+      .footer-inner {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+      }
+      .footer-inner h2 {
+        color: #000;
+        text-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.2);
+        font-size: 2em;
+        font-weight: 400;
+        text-transform: none;
+        margin: 0;
+      }
+      .footer-card {
+        background: var(--footer-card);
+        color: #000;
+        padding: 1em 2em;
+        font-size: 1.1em;
+        line-height: 1.5;
+        max-width: 480px;
+        width: 100%;
+      }
+      .footer-card p {
+        margin: 0.15em 0;
+      }
+      .footer-card a {
+        color: #000;
+        text-decoration: underline;
+        text-decoration-color: rgba(0, 0, 0, 0.35);
+      }
+      .footer-card a:hover {
+        color: var(--accent);
+        text-decoration-color: var(--accent);
+      }
+      .copyright {
+        color: #fff;
+        font-size: 0.9em;
+        margin-top: 1em;
+        text-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </body>
+</html>

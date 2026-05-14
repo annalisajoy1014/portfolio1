@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import StoryEmbed from "../../components/StoryEmbed.jsx";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const stories = await getCollection("stories");
+  return stories.map((s) => ({
+    params: { slug: s.id },
+    props: { story: s },
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+const { title, summary, file, format } = story.data;
+const src = `/stories/${file}`;
+---
+
+<Layout title={title} description={summary}>
+  <article class="container story">
+    <p class="muted">{format}</p>
+    <h1>{title}</h1>
+    <p class="summary">{summary}</p>
+
+    <div class="body">
+      <Content />
+    </div>
+
+    <StoryEmbed client:load src={src} title={title} />
+
+    <p class="back"><a href="/stories">← All stories</a></p>
+  </article>
+</Layout>
+
+<style>
+  .story {
+    max-width: 820px;
+  }
+  .summary {
+    font-size: 1.2rem;
+    color: var(--muted);
+    max-width: 60ch;
+    margin-bottom: 2rem;
+  }
+  .body {
+    margin-bottom: 2rem;
+    max-width: 60ch;
+  }
+  .back {
+    margin-top: 3rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+  }
+</style>

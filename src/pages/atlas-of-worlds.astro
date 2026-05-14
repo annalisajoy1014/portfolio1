@@ -1,0 +1,290 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const places = [
+  {
+    src: "/images/atlas-of-worlds/luxon-dream-bc1962.jpg",
+    title: "Sanctuary of Light",
+    subtitle: "The palace of the Enlightenment God",
+  },
+  {
+    src: "/images/atlas-of-worlds/forest-mountains-be20f7.png",
+    title: "The Road to Khra'lov'nyss",
+    subtitle: "Adventurers stumble across a path that wasn't there this morning",
+  },
+  {
+    src: "/images/atlas-of-worlds/vineyard-ea2346.jpg",
+    title: "Stormvinter Winery",
+    subtitle: "In a plane between the Abyss and the Fire Plane, ash falls like rain",
+  },
+  {
+    src: "/images/atlas-of-worlds/magical-city-6a1edc.png",
+    title: "Glissandir, city of Ljósálfar High Elves",
+    subtitle:
+      "The Ljósálfar who live here believe it is as close to a 'heaven' as one can get in life",
+  },
+  {
+    src: "/images/atlas-of-worlds/allowaks-santuary-da3fa0.jpg",
+    title: "The Village of Silkeayd",
+    subtitle: "A nest of arctic miscreants and outcasts",
+  },
+  {
+    src: "/images/atlas-of-worlds/strazcabur-63eec9.png",
+    title: "The Village of Strážcabúr",
+    subtitle:
+      "Hidden in the Ashkeeper Peaks, and a well-kept secret from the rest of the world",
+  },
+  {
+    src: "/images/atlas-of-worlds/under-the-mountain-db0588.jpg",
+    title: "The inside of a mystical shop known as \"Under the Mountain's Shadow\"",
+    subtitle: "Where you can buy anything under the mountain's shadow",
+  },
+  {
+    src: "/images/atlas-of-worlds/ashkeeper-peaks-temple-aa991c.png",
+    title: "Abandoned temple in the Ashkeeper Peaks",
+    subtitle: "Previously used to worship Khra'lov'nyss, the Blue Great Wyrm",
+  },
+];
+---
+
+<Layout
+  title="The Atlas of Worlds — Annalisa Ard"
+  description="A sampling of locations and characters designed to evoke player engagement and emotional investment."
+>
+  <section class="section atlas-intro">
+    <h1>The Atlas of Worlds, and a Chorus of Voices</h1>
+    <p class="intro-text">
+      Every place is a question a world asks, and is answered by narrative
+      design. Below is a sampling of some of the locations I have created for
+      the worlds I breathed into existence, crafted around the silent
+      questions of the adventuring path.
+    </p>
+  </section>
+
+  <section class="section atlas-gallery">
+    <ul class="gallery">
+      {
+        places.map((p) => (
+          <li class="gallery-item">
+            <div class="img-wrap">
+              <img src={p.src} alt={p.title} loading="lazy" />
+              <figcaption class="caption-over">
+                <span class="caption-title">{p.title}</span>
+                <span class="caption-sub">{p.subtitle}</span>
+              </figcaption>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section atlas-philosophy">
+    <p>
+      Each successful project begins with active listening and empathetic
+      inferences; I focus on understanding the problem, aligning the process
+      with end-goals, finding the right tone, and building something honestly
+      immersive, genuinely engaging, and expressive by nature. The result is
+      work that feels grounded, made to connect, inspire, and hold meaning
+      over time.
+    </p>
+    <p>
+      Every one of these locations exist in its world as an answer to a
+      question the story has not yet learned to ask. As the narrative
+      designer, I am constantly looking for what is not there, listening for
+      what the narrative hungers for when it feels too certain, too straight,
+      too safe. I build places that challenge the path forward: sanctuaries
+      for faith to falter, crossroads for destiny to bend, ruins where beauty
+      decays into truth. Each environment becomes a mirror for emotion —
+      wonder when the tale grows weary, sorrow when it loses depth, defiance
+      when it demands resolve. My process aligns empathy with architecture,
+      tone with intent, creating spaces that feel both inevitable and alive.
+      The result is work that connects, inspires, and endures — worlds that
+      breathe not because they are written, but because they remember why
+      they were built.
+    </p>
+  </section>
+
+  <section class="section chorus-heading">
+    <h2>Every hero begins with a heartbeat</h2>
+  </section>
+
+  <section class="section chorus-body">
+    <p>
+      In my work, characters are never passengers in the plot; they are the
+      plot. Their fears and hungers, the secrets they protect and the truths
+      they cannot outrun become the invisible currents that tug the world
+      into motion. Every choice they make, every flaw they carry, distorts
+      the shape of fate. Their internal contradictions are not background
+      details but the emotional physics that govern the rise and fall of
+      entire storylines.
+    </p>
+    <p>
+      The Chorus of Voices highlights some of the characters I crafted as
+      living engines of narrative, each one a center of gravity with the
+      power to alter destinies. My process begins at the core: uncovering a
+      character's original wound, the fracture that defines how they see
+      themselves and their world. From there, I trace the lines of tension —
+      how they resist their history, how they ache for something more, and
+      how that private struggle radiates outward into friendships, enmities,
+      cultures, and even the mythic fabric of the setting itself. These
+      voices — heroes, villains, martyrs, monsters, skeptics, dreamers —
+      become a symphony of intent and consequence, each heartbeat shaping
+      the rhythm of the tale that follows.
+    </p>
+    <p>
+      Meaning is born not only from who these characters are, but from how
+      they collide. A gentle word between allies can redirect a war; a lie
+      told at the wrong moment can collapse a kingdom. Love becomes a
+      lighthouse; resentment becomes a storm. Every bond, warm or wounding,
+      deepens the world, giving it emotional resonance that no map or
+      timeline could achieve on its own. Through this web of relationships,
+      players and readers don't just witness the story; they enter it,
+      threading themselves into the living architecture of connection,
+      conflict, and catharsis.
+    </p>
+    <p>
+      This is the heart of my narrative design: a world carried forward by
+      the people who inhabit it. A chorus of voices, each with a story worth
+      hearing, each with the power to reshape the world — one heartbeat at
+      a time.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .atlas-intro {
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .atlas-intro h1 {
+    margin-bottom: 0.5em;
+    max-width: 900px;
+  }
+  .intro-text {
+    font-size: 1.4em;
+    max-width: 1100px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+  }
+  .atlas-gallery {
+    padding-top: 5vh;
+    padding-bottom: 6vh;
+  }
+  .gallery {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+  }
+  @media (max-width: 1100px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 800px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 520px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  .gallery-item {
+    margin: 0;
+  }
+  .img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #111;
+  }
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    filter: brightness(0.85);
+  }
+  .gallery-item:hover .img-wrap img {
+    transform: scale(1.05);
+    filter: brightness(1);
+  }
+  .caption-over {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.2em 1em 1em;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.5) 45%,
+      rgba(0, 0, 0, 0) 80%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+  }
+  .gallery-item:hover .caption-over {
+    opacity: 1;
+  }
+  .caption-title {
+    font-family: var(--font-serif);
+    font-size: 1.15em;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.3em;
+  }
+  .caption-sub {
+    font-family: var(--font-serif);
+    font-size: 0.95em;
+    font-weight: 300;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .atlas-philosophy {
+    padding-top: 6vh;
+    padding-bottom: 4vh;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .atlas-philosophy p {
+    font-size: 1.4em;
+    line-height: 1.65;
+    margin-bottom: 1.2em;
+    text-align: center;
+  }
+  .chorus-heading {
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+    text-align: center;
+  }
+  .chorus-heading h2 {
+    font-size: 2.5em;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .chorus-body {
+    padding-top: 2vh;
+    padding-bottom: 8vh;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .chorus-body p {
+    font-size: 1.4em;
+    line-height: 1.65;
+    margin-bottom: 1.3em;
+  }
+</style>

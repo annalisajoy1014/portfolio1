@@ -1,0 +1,176 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="About Me & Resume — Annalisa Ard"
+  description="About Annalisa Ard — Narrative Designer, Mythologist Connoisseur, Literature Expert, and Adventure Seeker."
+>
+  <section class="section cover about-hero">
+    <div
+      class="cover-bg"
+      style="background-image: url('/images/about/mayan-ruins-be5208.jpg');"
+    ></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title">About Annalisa</h1>
+      <p class="hero-subtitle">
+        Narrative Designer, Mythologist Connoisseur, Literature Expert, and
+        Adventure Seeker
+      </p>
+    </div>
+  </section>
+
+  <section class="section bio-section">
+    <div class="bio-grid">
+      <aside class="portrait-col">
+        <img
+          class="portrait"
+          src="/images/about/annalisa-ard-73ebb1.jpg"
+          alt="Annalisa Ard"
+          loading="lazy"
+        />
+        <a href="/files/ard-resume.pdf" class="resume-link" download>
+          Annalisa's Resume
+        </a>
+      </aside>
+
+      <div class="bio-col">
+        <p class="bio-lead">
+          I'm a narrative designer with a lifelong obsession for storytelling
+          that gives players real choices, and real consequences. My mission
+          is to create emotionally resonant, reactive experiences in all forms
+          of RPGs that feel intimate yet open.
+        </p>
+        <p>
+          Before stepping into the game industry, I spent nearly a decade
+          teaching literature, mythology, and narrative structure to students
+          around the world. That background trained me to dissect story arcs,
+          communicate complex ideas clearly, and adapt tales dynamically to
+          diverse audiences — skills I now channel into crafting branching
+          dialogue, reactive quests, and worlds that feel alive.
+        </p>
+        <p>
+          In 2025, I wrote and directed over 2,000 hours of interactive
+          narrative content for multiplayer campaigns, honing my ability to
+          design with player agency at the core. My work emphasizes pacing,
+          emotional payoff, and cross-department collaboration, because the
+          best narratives aren't written in isolation.
+        </p>
+        <p>
+          I'm especially inspired by the CRPG's interest and commitment to
+          storytelling that rewards curiosity, punishes assumptions, and
+          honors player choice with tangible narrative impact. Playing and
+          studying the leading games is a master class in collaborative
+          worldbuilding and emergent design. It would be a dream, and a
+          calling, to contribute to your next masterpiece.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-hero {
+    min-height: 75vh;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.92);
+    max-width: 900px;
+    padding: 2rem;
+  }
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: 4em;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.95);
+    text-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.2);
+    margin: 0 0 0.4em;
+  }
+  .hero-subtitle {
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(9, 15, 0, 0.95);
+    text-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.2);
+    margin: 0;
+  }
+  .bio-section {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  }
+  .bio-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) 2.6fr;
+    gap: 4rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  .portrait-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 2rem;
+  }
+  .portrait {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .resume-link {
+    font-family: var(--font-serif);
+    font-size: 1.8em;
+    font-weight: 400;
+    color: var(--accent);
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.2;
+    transition: color 0.2s ease;
+  }
+  .resume-link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+  .bio-col p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    margin: 0 0 1.3em;
+    text-align: left;
+  }
+  .bio-lead {
+    font-size: 1.3em !important;
+    font-weight: 400;
+  }
+  @media (max-width: 800px) {
+    .bio-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .portrait-col {
+      position: static;
+    }
+    .hero-title {
+      font-size: 2.6em;
+    }
+    .hero-subtitle {
+      font-size: 1.2em;
+    }
+  }
+</style>

@@ -1,0 +1,716 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pillars = [
+  {
+    title: "A reactive world that mirrors the player's soul",
+    name: "Androlynne",
+    href: "#androlynne",
+  },
+  {
+    title: "A government of ghosts",
+    name: "The Umbral Plume",
+    href: "#umbral-plume",
+  },
+  {
+    title: "A personal, living mirror of the player's morality",
+    name: "Lilithyne Nyvashé-Dela",
+    href: "#lilithyne",
+  },
+];
+---
+
+<Layout
+  title="Featured Examples — Annalisa Ard"
+  description="Three pillars of narrative structure: a place, a faction, and a character."
+>
+  <section class="section cover ex-hero">
+    <div
+      class="cover-bg"
+      style="background-image: url('/images/examples/ai-map-of-kasoltiel-42821b.png');"
+    ></div>
+    <div class="cover-overlay"></div>
+    <div class="ex-hero-inner">
+      <p class="eyebrow">Narrative Pillars</p>
+      <h1>World Building from the Ground Up</h1>
+      <p class="hero-lede">
+        Ideas become clearer when shaped with intention. I construct work that
+        speaks with purpose, emotion, and deep attention to detail.
+      </p>
+    </div>
+  </section>
+
+  <section class="section ex-quote">
+    <blockquote>
+      <p class="quote-text">
+        "Why do we tell stories? To try to make sense of a world that can be
+        terrifying and enormous."
+      </p>
+      <footer>
+        <p class="quote-attr"><strong>Brennan Lee Mulligan</strong></p>
+        <p class="quote-source">Exandria Unlimited: Calamity E.4</p>
+      </footer>
+    </blockquote>
+  </section>
+
+  <section class="section ex-overview">
+    <ul class="pillar-list">
+      {
+        pillars.map((p, i) => (
+          <li>
+            <a href={p.href}>
+              <span class="pillar-num">{String(i + 1).padStart(2, "0")}</span>
+              <span class="pillar-title">{p.title}</span>
+              <span class="pillar-name">{p.name}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="overview-text">
+      Drawn from over 400 pages of original lore, the examples here offer
+      three glimpses into the living design. Each piece — a place, an
+      organization, and a character — is both story and structure; each one
+      works as a fragment of its world's greater truth, preserved to show how
+      narrative design gives chaos form. From initial sketches to final
+      delivery, the goal was to create something both approachable and
+      enduring, thoughtful in tone, simple in form, and made to resonate.
+    </p>
+  </section>
+
+  <article id="androlynne" class="pillar-section pillar-section--bg">
+    <div
+      class="pillar-bg"
+      style="background-image: url('/images/examples/androlynne-1e8cae.jpg');"
+    ></div>
+    <div class="pillar-inner">
+      <header>
+        <h2>Androlynne: The Birthplace of Desolation</h2>
+        <p class="pillar-meta">
+          <strong>Type of Work:</strong> Worldbuilding meets character
+          development — a lore-rich demiplane forged through corrupted wish
+          magic. This narrative exercise explores the intersection of love,
+          loss, and consequence, framed as an environmental storytelling
+          prototype.
+        </p>
+        <p class="pillar-meta">
+          <strong>Design Focus:</strong> Emotional consequence, branching
+          outcomes, and systemic lore cohesion.
+        </p>
+      </header>
+
+      <section>
+        <h3>Story Overview</h3>
+        <p>
+          Adventurers find themselves drawn into Kaorol'Tiel, a blighted
+          valley in the Dunrock Mountains shrouded in perpetual storm and
+          volcanic ash. This cursed land, known to few and survived by even
+          fewer, is now ruled by Ryzneuta, a lich lord with unspeakable powers
+          no lich ever obtained before. Lured here by ties to Balasar's past
+          failings and the lich's murder of Surina, Balasar's friend and
+          companion, his adventuring group sets out on a dark course that
+          takes them through the many hidden corners and shadowy depths of
+          Kaorol'Tiel to see what answers the shadows have hidden in the
+          depths of this best-forgotten realm. Kaorol'Tiel is a land of
+          ghosts, abyssal demons, and other dark creatures. The wilderness
+          hides many secrets, including crumbling ruins and dismal
+          battlefields that tell the story of Ryzneuta's life as a conqueror
+          and the conquered.
+        </p>
+      </section>
+
+      <section>
+        <h3>Androlynne</h3>
+        <p>
+          Androlynne is a narrative design study set in Kaorol'Tiel, a world
+          that mourns itself. Once a thriving refuge for survivors displaced
+          across the planes, Androlynne was created by the lich-lord
+          Ryzneuta, formerly the knight Evandrin Alterra, whose desperate
+          attempt to reunite his scattered family twisted hope into horror.
+          The valley's geography, weather, and ecology mirror the corruption
+          of its creator: storms pulse with emotional resonance, ruins whisper
+          fragmented memories, and even the light bends with regret.
+        </p>
+      </section>
+
+      <section>
+        <h3>Narrative Core</h3>
+        <p>
+          At its heart, the story examines how love can decay into obsession
+          and how redemption can curdle into damnation. Evandrin's tragic
+          bargain with the glabrezu Rozgat and the sentient weapon known as
+          the Blade of Broken Mirrors becomes a class in consequence: every
+          noble instinct he once possessed is turned inward until his
+          compassion becomes the catalyst for atrocity. His climactic ritual
+          — meant to free his child, Elias, from the Astral Sea — instead
+          consumes the very souls that gave him hope, transforming him into
+          Ryzneuta, the Lord of Desolation, and drowning Androlynne beneath
+          necrotic storms of his own making.
+        </p>
+      </section>
+
+      <section>
+        <h3>Interactive Design Intent</h3>
+        <p>
+          The narrative unfolds as a branching, environmental questline where
+          players uncover the truth of Androlynne's fall through exploration,
+          artifact discovery, and moral choice. Every decision reshapes the
+          world's tone and texture; storms quiet when compassion guides the
+          player, or surge with renewed fury when power or vengeance takes
+          hold. Dialogue, environmental cues, and emergent events are built
+          to respond dynamically to emotional alignment, not binary morality,
+          allowing players to experience consequence through atmosphere and
+          perception rather than exposition.
+        </p>
+        <p>
+          The most defining feature of this design is the dual-reality
+          system, which unlocks divergent layers of truth once a player opens
+          the door to corruption. I developed two intersecting narrative
+          frameworks: one grounded in objective reality, and another filtered
+          through a corrupted consciousness. Each presents altered lore
+          fragments, contradictory NPC memories, and distorted world details
+          — creating a psychological feedback loop that makes players
+          question what is real, who can be trusted, and whether redemption
+          is possible at all. As players compare experiences, they become
+          both participants and unreliable narrators in the same world,
+          mirroring the central theme of Androlynne itself: that perception,
+          like hope, is fragile — and easily broken.
+        </p>
+      </section>
+
+      <section>
+        <h3>Design Goals</h3>
+        <ul>
+          <li>
+            Build a reactive world simulation where geography, weather, and
+            lore dynamically mirror player behavior and emotional state.
+          </li>
+          <li>
+            Integrate environmental storytelling to replace exposition with
+            experiential discovery.
+          </li>
+          <li>
+            Weave branching quests around thematic polarity (hope vs.
+            despair, redemption vs. obsession) to give narrative weight to
+            gameplay decisions.
+          </li>
+          <li>
+            Design lore fragments and NPC interactions that reveal different
+            facets of truth depending on player empathy, curiosity, or
+            ambition.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Narrative Significance</h3>
+        <p>
+          Androlynne exemplifies my approach to narrative design: story as
+          ecosystem. Every decision — visual, emotional, or systemic —
+          supports the player's journey and makes it unique to each outlook,
+          and each player. By binding worldbuilding to emotional architecture,
+          the project transforms traditional lore into a living reflection of
+          choice, ensuring that the environment itself becomes both witness
+          and judge of the player's actions.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <article id="umbral-plume" class="pillar-section pillar-section--bg pillar-section--right">
+    <div
+      class="pillar-bg pillar-bg--right"
+      style="background-image: url('/images/examples/umbral-plume-contrast-1fa291.png');"
+    ></div>
+    <div class="pillar-inner pillar-inner--narrow">
+      <header>
+        <h2>The Umbral Plume: Shadow Society in Shadowed Lands</h2>
+        <p class="pillar-meta">
+          <strong>Type of Work:</strong> Faction design & narrative systems
+          integration — an invisible order that shapes the world's fate,
+          reflecting not who holds power, but who controls the truth.
+        </p>
+        <p class="pillar-meta">
+          <strong>Design Focus:</strong> Moral complexity, world reactivity,
+          and information as power.
+        </p>
+      </header>
+
+      <section>
+        <h3>Story Overview</h3>
+        <p>
+          In the fractured nation of Xhorhas, where survival favors the
+          ruthless, the Umbral Plume thrives in silence. Born from the chaos
+          following the Calamity, it grew from a coalition of spies,
+          merchants, and mages who believed that civilization could only be
+          protected by those willing to operate unseen. While kingdoms
+          fought in the light, the Umbral Plume rewove the world's fate in
+          the dark — manipulating trade routes, forging secret pacts, and
+          erasing truths that threatened "balance."
+        </p>
+        <p>
+          Their credo is simple: "Control is compassion." They see themselves
+          not as villains but as custodians of order — the quiet architects
+          preventing the next catastrophe. Yet within their ranks, ambition
+          and ideology clash; every cell guards a fragment of the truth,
+          ensuring that no one, not even their enigmatic leader known only
+          as the Shadow, ever sees the full design.
+        </p>
+      </section>
+
+      <section>
+        <h3>Narrative Core</h3>
+        <p>
+          The Umbral Plume examines how the pursuit of order corrodes the
+          soul. Its stories revolve around ethical dissonance — when the only
+          way to preserve peace is through deceit. The faction serves as a
+          mirror to the player's own rationalizations: every collaboration,
+          every betrayal, forces a reckoning between belief and consequence.
+        </p>
+        <p class="quote-question">
+          At its heart lies the question: <em>If control prevents chaos, can
+            it ever be innocent?</em>
+        </p>
+      </section>
+
+      <section>
+        <h3>Interactive Design Intent</h3>
+        <p>
+          Faction interaction is built on a reputation-through-behavior
+          system, where trust is earned not by declared loyalty but by
+          consistent action. The Umbral Plume observes the player from the
+          shadows, adapting its responses to how secrets are used, shared,
+          or withheld.
+        </p>
+        <p>Information functions as both resource and weapon:</p>
+        <ul>
+          <li>
+            Sharing intelligence opens new paths but alters the balance of
+            power elsewhere.
+          </li>
+          <li>
+            Concealment preserves independence but closes strategic
+            opportunities.
+          </li>
+          <li>
+            Manipulating both sides risks exposure, triggering dynamic
+            betrayal events that rewrite alliances mid-campaign.
+          </li>
+        </ul>
+        <p>
+          To embody the organization's mystique, I designed a layered
+          knowledge framework — multiple simultaneous "truths" coexisting
+          across questlines. Each character perceives events differently
+          depending on what information the player controls, creating a world
+          of information asymmetry where knowledge defines reality. Players
+          become unreliable narrators in their own story, unsure whether they
+          are using the Umbral Plume or being used by it.
+        </p>
+      </section>
+
+      <section>
+        <h3>Design Goals</h3>
+        <ul>
+          <li>
+            Develop a morally gray faction system that measures influence
+            through perception, not numeric alignment.
+          </li>
+          <li>
+            Implement information-economy mechanics, turning secrets into
+            tradable resources with emotional cost.
+          </li>
+          <li>
+            Integrate branching espionage quests whose outcomes reverberate
+            across political and personal storylines.
+          </li>
+          <li>
+            Reinforce faction ideology through visual and environmental
+            motifs — architecture, lighting, and sound shifting with secrecy
+            or exposure.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Narrative Significance</h3>
+        <p>
+          The Umbral Plume showcases my ability to design narrative
+          ecosystems of influence — where control, secrecy, and consequence
+          intertwine. It complements Androlynne by shifting the lens from
+          personal tragedy to collective manipulation, demonstrating
+          versatility across emotional, systemic, and philosophical
+          storytelling.
+        </p>
+        <p>
+          Here, the story is not about a world reacting to the player's
+          soul, but about a player navigating a world that reacts to what
+          they choose to reveal. It's a study in the art of unseen hands —
+          how hidden systems and moral compromise can drive the deepest kind
+          of reactivity: the one that happens inside the player.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <article id="lilithyne" class="pillar-section pillar-section--purple">
+    <div class="pillar-grid">
+      <div class="pillar-text">
+        <header>
+          <h2>Lilithyne Nyvashé-Dela: The Shadow That Chose the Light</h2>
+          <p class="pillar-meta">
+            <strong>Type of Work:</strong> Character design & narrative
+            architecture — a soul forged by betrayal, where survival means
+            choosing which parts of yourself to keep alive.
+          </p>
+          <p class="pillar-meta">
+            <strong>Design Focus:</strong> Moral consequence, identity
+            systems, and emotionally reactive storytelling.
+          </p>
+        </header>
+
+        <section>
+          <h3>Character Overview</h3>
+          <p>
+            Born Melinoë Tenebranox, heir to a dynasty of power and cruelty,
+            Lilithyne carries the weight of a legacy built on blood and
+            manipulation. Her family's empire of spies and sorcerers defined
+            strength as dominance and affection as weakness. When her sister,
+            Ephra, murdered their mother to seize control, Melinoë's final
+            illusion of loyalty shattered. She disappeared into the wide world
+            and was reborn as Lilithyne Nyvashé-Dela: a fugitive who refuses
+            to inherit her family's darkness but can never fully escape it.
+          </p>
+        </section>
+
+        <section>
+          <h3>Narrative Core</h3>
+          <p>
+            Lilithyne's story explores what it means to reject destiny
+            without erasing it. Every interaction with her revolves around
+            identity and trust: how much of her former self she admits, how
+            much she conceals, and whether the player encourages her to
+            confront or bury her past. Her arc is designed as a mirror
+            narrative so the player's choices influence not only her
+            perception of the world but her self-definition. Compassion
+            pushes her toward redemption; pragmatism strengthens her resolve
+            as a survivor; cruelty reawakens the Tenebranox blood she's tried
+            to deny.
+          </p>
+          <p class="quote-question">
+            <strong>Core Question:</strong> <em>Can someone born in darkness
+              ever use those shadows to do good?</em>
+          </p>
+        </section>
+
+        <section>
+          <h3>Interactive Design Intent</h3>
+          <p>
+            Lilithyne's presence in the game functions as both companion and
+            narrative catalyst. Her loyalty system is built on behavioral
+            empathy rather than dialogue approval.
+          </p>
+          <p>
+            When the player chooses mercy in tense situations, her demeanor
+            softens; she offers new dialogue revealing vulnerability and
+            fear. When the player deceives, manipulates, or justifies
+            ruthless choices, she responds with recognition and guarded
+            respect, unlocking new tactical or espionage options drawn from
+            her Tenebranox heritage.
+          </p>
+          <p>
+            At the story's midpoint, the player may choose to help her
+            confront or conceal her true identity. This choice permanently
+            alters her visual presentation, combat style, and dialogue
+            delivery, embodying the theme of identity as agency.
+          </p>
+        </section>
+
+        <section>
+          <h3>Design Goals</h3>
+          <ul>
+            <li>
+              Craft a character-driven questline exploring trauma,
+              redemption, and moral adaptability.
+            </li>
+            <li>
+              Implement behavior-based emotional reactivity rather than
+              binary approval systems.
+            </li>
+            <li>
+              Blend personal narrative with gameplay stakes, ensuring story
+              choices impact mechanics.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Narrative Significance</h3>
+          <p>
+            Lilithyne Nyvashé-Dela exemplifies my approach to
+            character-centric systems design: story and mechanics evolving
+            together to evoke empathy, tension, and consequence. Her arc
+            demonstrates how identity can function as both narrative and
+            system; something that changes not through exposition but through
+            the player's behavior.
+          </p>
+          <p>
+            She stands as a counterpoint to Androlynne's tragic world and
+            The Umbral Plume's political manipulation: where those stories
+            explore corruption on a cosmic or societal scale, Lilithyne's is
+            intimate, human, and deeply personal. In her, the storm is
+            internal, but no less reactive.
+          </p>
+        </section>
+      </div>
+      <aside class="pillar-portraits">
+        <img
+          src="/images/examples/lilithyne-tenebranox-dbf255.jpg"
+          alt="Lilithyne portrait"
+          loading="lazy"
+        />
+        <img
+          src="/images/examples/lilithyne-tenebranox-scene-a72003.jpg"
+          alt="Lilithyne scene"
+          loading="lazy"
+        />
+      </aside>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .ex-hero {
+    min-height: 70vh;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 6vh;
+  }
+  .ex-hero-inner {
+    max-width: 800px;
+    text-align: left;
+  }
+  .eyebrow {
+    font-family: var(--font-serif);
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0.6em;
+    letter-spacing: 0.04em;
+  }
+  .ex-hero h1 {
+    margin-bottom: 0.5em;
+  }
+  .hero-lede {
+    font-size: 1.3em;
+    max-width: 32em;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+  }
+
+  .ex-quote {
+    padding: 8vh 5%;
+    text-align: center;
+  }
+  .ex-quote blockquote {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+  .quote-text {
+    font-size: 2.5em;
+    line-height: 1.3;
+    font-style: italic;
+    margin-bottom: 1.2em;
+    font-weight: 400;
+  }
+  .quote-attr {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 700;
+  }
+  .quote-source {
+    font-size: 1.1em;
+    color: var(--muted);
+    margin: 0.2em 0 0;
+    font-weight: 300;
+  }
+
+  .ex-overview {
+    padding: 4vh 5%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .pillar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.5em;
+  }
+  .pillar-list a {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.1em 1rem;
+    padding: 1em 0;
+    border-bottom: 1px solid var(--border);
+    color: inherit;
+  }
+  .pillar-list a:hover .pillar-title,
+  .pillar-list a:hover .pillar-name {
+    color: var(--accent);
+  }
+  .pillar-num {
+    grid-row: 1 / span 2;
+    align-self: center;
+    font-family: var(--font-serif);
+    font-size: 1.5em;
+    color: var(--accent);
+  }
+  .pillar-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .pillar-name {
+    font-size: 1.05em;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .overview-text {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .pillar-section {
+    position: relative;
+    padding: 10vh 5%;
+    overflow: hidden;
+  }
+  .pillar-section--bg .pillar-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.55;
+    z-index: 0;
+  }
+  .pillar-bg--right {
+    background-position: right center;
+  }
+  .pillar-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.85)
+    );
+    z-index: 1;
+  }
+  .pillar-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 880px;
+  }
+  .pillar-inner--narrow {
+    max-width: 760px;
+  }
+  .pillar-section--right .pillar-inner {
+    margin-left: 0;
+  }
+  .pillar-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  .pillar-meta {
+    font-size: 1.15em;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0 0 0.7em;
+    line-height: 1.6;
+  }
+  .pillar-section section {
+    margin-top: 2.2em;
+  }
+  .pillar-section h3 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 0 0 0.6em;
+  }
+  .pillar-section p {
+    font-size: 1.08em;
+    line-height: 1.7;
+  }
+  .pillar-section ul {
+    padding-left: 1.4rem;
+  }
+  .pillar-section ul li {
+    margin-bottom: 0.5em;
+    line-height: 1.65;
+  }
+  .quote-question {
+    font-size: 1.2em !important;
+    padding-left: 1em;
+    border-left: 2px solid var(--accent);
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .pillar-section--purple {
+    background: rgba(18, 0, 32, 1);
+  }
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+  }
+  .pillar-portraits {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 2rem;
+  }
+  .pillar-portraits img {
+    width: 100%;
+    border-radius: 0.3em;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .ex-overview {
+      grid-template-columns: 1fr;
+    }
+    .pillar-grid {
+      grid-template-columns: 1fr;
+    }
+    .pillar-portraits {
+      position: static;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .pillar-portraits img {
+      flex: 1 1 200px;
+    }
+    .pillar-section h2 {
+      font-size: 1.8em;
+    }
+    .quote-text {
+      font-size: 1.7em;
+    }
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const stories = (await getCollection("stories")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Layout title="Stories">
+  <section class="container">
+    <p class="muted">Interactive Fiction</p>
+    <h1>Stories</h1>
+    <p class="intro">
+      Short interactive pieces built in Twine. Each one runs in the browser —
+      no install, just click and play.
+    </p>
+
+    <ul class="story-list">
+      {
+        stories.map((s) => (
+          <li>
+            <a href={`/stories/${s.id}`}>
+              <div>
+                <h3>{s.data.title}</h3>
+                <p>{s.data.summary}</p>
+              </div>
+              <span class="muted">{s.data.format}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .intro {
+    max-width: 60ch;
+    color: var(--muted);
+    margin-bottom: 3rem;
+  }
+  .story-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .story-list li {
+    border-top: 1px solid var(--border);
+  }
+  .story-list li:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+  .story-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: none;
+  }
+  .story-list h3 {
+    margin: 0 0 0.3rem;
+  }
+  .story-list p {
+    margin: 0;
+    color: var(--muted);
+    max-width: 60ch;
+  }
+</style>

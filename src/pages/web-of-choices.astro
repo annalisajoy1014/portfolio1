@@ -1,0 +1,127 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const images = [
+  { src: "/images/web-of-choices/tenebranox-house-part-1-284aa8.jpg", w: 624, h: 202 },
+  { src: "/images/web-of-choices/encantada-flow-d4c632.jpg", w: 624, h: 574 },
+  { src: "/images/web-of-choices/tenebranox-house-part-3-724a5b.jpg", w: 624, h: 524 },
+  { src: "/images/web-of-choices/tenebranox-house-part-2-284aa8.jpg", w: 512, h: 819 },
+  { src: "/images/web-of-choices/sail-to-xhorhas-part-2-aee8dd.jpg", w: 1274, h: 1060 },
+  { src: "/images/web-of-choices/sail-to-xhorhas-part-1-6160c9.jpg", w: 551, h: 692 },
+];
+---
+
+<Layout
+  title="The Web of Choices — Annalisa Ard"
+  description="Fate is the pattern we weave from choice."
+>
+  <section class="section woc-intro">
+    <h1>The Web of Choices</h1>
+    <h2 class="subtitle">Fate is the pattern we weave from choice.</h2>
+  </section>
+
+  <section class="section woc-gallery">
+    <ul class="masonry">
+      {
+        images.map((img) => (
+          <li
+            class="masonry-item"
+            style={`--aspect: ${img.w} / ${img.h};`}
+          >
+            <img src={img.src} alt="" loading="lazy" />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section woc-story">
+    <h2 class="story-heading">My story</h2>
+    <p>
+      I believe in design that feels, not just functions. Built on curiosity,
+      dialogue, and craft, my work explores how form and message shape
+      experience. Every project is a collaboration, grounded in clarity, made
+      to resonate, and built with the kind of care that stands the test of
+      time.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .woc-intro {
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .woc-intro h1 {
+    margin-bottom: 0.3em;
+    max-width: 900px;
+  }
+  .subtitle {
+    font-size: 1.68em;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    max-width: 900px;
+  }
+
+  .woc-gallery {
+    padding-top: 5vh;
+    padding-bottom: 6vh;
+  }
+  .masonry {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    grid-auto-flow: dense;
+  }
+  @media (max-width: 900px) {
+    .masonry {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 560px) {
+    .masonry {
+      grid-template-columns: 1fr;
+    }
+  }
+  .masonry-item {
+    overflow: hidden;
+    background: #111;
+    aspect-ratio: var(--aspect);
+  }
+  .masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s ease, filter 0.55s ease;
+    filter: brightness(0.92);
+  }
+  .masonry-item:hover img {
+    transform: scale(1.04);
+    filter: brightness(1);
+  }
+
+  .woc-story {
+    padding-top: 6vh;
+    padding-bottom: 8vh;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .story-heading {
+    font-size: 2em;
+    margin-bottom: 0.7em;
+  }
+  .woc-story p {
+    font-size: 1.4em;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.92);
+  }
+</style>

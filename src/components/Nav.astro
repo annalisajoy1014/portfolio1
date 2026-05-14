@@ -1,0 +1,105 @@
+---
+const path = Astro.url.pathname;
+const links = [
+  { href: "/", label: "Portfolio Overview" },
+  { href: "/narrative-systems--implementation", label: "Narrative Systems & Implementation" },
+  { href: "/writing-samples", label: "Writing Samples" },
+  { href: "/about", label: "About Me & Resume" },
+];
+
+const isActive = (href: string) =>
+  href === "/" ? path === "/" : path.startsWith(href);
+---
+
+<header class="site-nav">
+  <a href="/" class="brand">Annalisa Ard</a>
+  <nav>
+    <ul>
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={["nav-link", { active: isActive(link.href) }]}
+            >
+              <span>{link.label}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-nav {
+    background: #000;
+    padding: 2.5rem 5% 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .brand {
+    font-family: var(--font-serif);
+    font-size: 1.365em;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--fg);
+  }
+
+  .brand:hover {
+    color: var(--accent);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-family: var(--font-serif);
+    font-size: 1.05em;
+    font-weight: 300;
+    color: var(--fg);
+    position: relative;
+    padding-bottom: 0.15em;
+  }
+
+  .nav-link span {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-link span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -0.2em;
+    height: 1px;
+    background: var(--accent);
+    transition: right 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .nav-link:hover span::after,
+  .nav-link.active span::after {
+    right: 0;
+  }
+
+  @media (max-width: 760px) {
+    nav ul { gap: 1.2em; }
+    .nav-link { font-size: 0.95em; }
+  }
+</style>

@@ -1,0 +1,161 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Writing Samples — Annalisa Ard"
+  description="Process of creating the Androlynne encounter — write-up and lo-fi prototype."
+>
+  <section class="section samples">
+    <h1>Process of creating the Androlynne encounter</h1>
+    <div class="top-bar">
+      <a href="/stories/sail-to-xhorhas-part-1?fullscreen=1" class="story-button">
+        <span class="play-icon" aria-hidden="true">▶</span>
+        Play: Sail to Xhorhas, Part 1
+      </a>
+    </div>
+
+    <div class="samples-grid">
+      <a
+        class="sample sample--figma"
+        href="https://claude.ai/public/artifacts/2c9270cc-e158-4160-8ede-4fbb3a62d22e"
+        target="_blank"
+        rel="noopener"
+        aria-label="The first, lo-fi prototype of how the encounter will run"
+      >
+        <img
+          src="/images/writing/androlynn-figma-ae2813.jpg"
+          alt="Lo-fi prototype diagram"
+          loading="lazy"
+        />
+        <span class="hover-label">Open prototype →</span>
+      </a>
+
+      <a
+        class="sample sample--doc"
+        href="/files/androlynne-write-up.pdf"
+        target="_blank"
+        rel="noopener"
+        aria-label="Encounter in Androlynne, first write up"
+      >
+        <img
+          src="/images/writing/androlynne-cover-57761d.jpg"
+          alt="Androlynne write-up cover"
+          loading="lazy"
+        />
+        <span class="hover-label">View PDF →</span>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .samples {
+    padding: 6vh 5% 10vh;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  .samples h1 {
+    text-align: center;
+    font-size: clamp(2em, 4.5vw, 3.4em);
+    font-weight: 400;
+    margin: 0 auto 1.5em;
+    max-width: 1200px;
+    line-height: 1.15;
+  }
+
+  .top-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2.5em;
+  }
+
+  .story-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--font-serif);
+    font-size: 1.15em;
+    font-weight: 400;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+
+  .story-button:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+
+  .play-icon {
+    font-size: 0.7em;
+    line-height: 1;
+  }
+
+  .samples-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    align-items: end;
+  }
+
+  .sample {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #111;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .sample img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.95);
+  }
+
+  .sample:hover img {
+    transform: scale(1.02);
+    filter: brightness(1);
+  }
+
+  .sample--figma {
+    aspect-ratio: 1902 / 495;
+  }
+
+  .sample--doc {
+    aspect-ratio: 1335 / 919;
+  }
+
+  .hover-label {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 1em;
+    padding: 0.5em 0.9em;
+    border-radius: 0.3em;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+  }
+
+  .sample:hover .hover-label {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 800px) {
+    .samples-grid {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      gap: 2rem;
+    }
+  }
+</style>
