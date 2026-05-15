@@ -19,36 +19,48 @@ import Layout from "../layouts/Layout.astro";
       </a>
     </div>
 
-    <div class="samples-grid">
-      <a
-        class="sample sample--figma"
-        href="https://claude.ai/public/artifacts/2c9270cc-e158-4160-8ede-4fbb3a62d22e"
-        target="_blank"
-        rel="noopener"
-        aria-label="The first, lo-fi prototype of how the encounter will run"
-      >
-        <img
-          src="/images/writing/androlynn-figma-ae2813.jpg"
-          alt="Lo-fi prototype diagram"
-          loading="lazy"
-        />
-        <span class="hover-label">Open prototype →</span>
-      </a>
+    <div class="process-intro">
+      <p>
+        The Androlynne encounter was designed from first principles — starting with a branching flow diagram in Figma to map player decisions and emotional beats, then translated into a full design document covering dialogue, consequences, and narrative structure. Both artifacts are below.
+      </p>
+    </div>
 
-      <a
-        class="sample sample--doc"
-        href="/files/androlynne-write-up.pdf"
-        target="_blank"
-        rel="noopener"
-        aria-label="Encounter in Androlynne, first write up"
-      >
-        <img
-          src="/images/writing/androlynne-cover-57761d.jpg"
-          alt="Androlynne write-up cover"
-          loading="lazy"
-        />
-        <span class="hover-label">View PDF →</span>
-      </a>
+    <div class="samples-grid">
+      <div class="sample-wrapper">
+        <a
+          class="sample sample--figma"
+          href="https://claude.ai/public/artifacts/2c9270cc-e158-4160-8ede-4fbb3a62d22e"
+          target="_blank"
+          rel="noopener"
+          aria-label="The first, lo-fi prototype of how the encounter will run"
+        >
+          <img
+            src="/images/writing/androlynn-figma-ae2813.jpg"
+            alt="Lo-fi prototype diagram"
+            loading="lazy"
+          />
+          <span class="hover-label">Open prototype →</span>
+        </a>
+        <p class="sample-caption">Lo-fi Figma prototype — branching flow diagram mapping encounter decisions and outcomes</p>
+      </div>
+
+      <div class="sample-wrapper">
+        <a
+          class="sample sample--doc"
+          href="/files/androlynne-write-up.pdf"
+          target="_blank"
+          rel="noopener"
+          aria-label="Encounter in Androlynne, first write up"
+        >
+          <img
+            src="/images/writing/androlynne-cover-57761d.jpg"
+            alt="Androlynne write-up cover"
+            loading="lazy"
+          />
+          <span class="hover-label">View PDF →</span>
+        </a>
+        <p class="sample-caption">Design document — encounter write-up covering dialogue, character motivation, and branching consequences</p>
+      </div>
     </div>
   </section>
 </Layout>
@@ -157,6 +169,26 @@ import Layout from "../layouts/Layout.astro";
     transform: translateY(0);
   }
 
+  .process-intro {
+    max-width: 720px;
+    margin-bottom: 2.5em;
+  }
+  .process-intro p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.78);
+  }
+  .sample-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+  }
+  .sample-caption {
+    font-size: 0.88em;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.5;
+    margin: 0;
+  }
   @media (max-width: 800px) {
     .samples-grid {
       grid-template-columns: 1fr;

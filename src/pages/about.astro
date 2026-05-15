@@ -68,6 +68,24 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <section class="section tools-section">
+    <h2 class="tools-heading">Tools I Work In</h2>
+    <ul class="tools-list">
+      <li class="tool-item">
+        <span class="tool-name">Twine</span>
+        <span class="tool-desc">Interactive fiction & branching narrative prototyping</span>
+      </li>
+      <li class="tool-item">
+        <span class="tool-name">Ink / Inkle</span>
+        <span class="tool-desc">Narrative scripting for games and dialogue systems</span>
+      </li>
+      <li class="tool-item">
+        <span class="tool-name">Figma</span>
+        <span class="tool-desc">Lo-fi prototyping, flow diagrams, and narrative structure mapping</span>
+      </li>
+    </ul>
+  </section>
 </Layout>
 
 <style>
@@ -171,6 +189,52 @@ import Layout from "../layouts/Layout.astro";
     }
     .hero-subtitle {
       font-size: 1.2em;
+    }
+  }
+  .tools-section {
+    padding-top: 2vh;
+    padding-bottom: 10vh;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .tools-heading {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-bottom: 1.4em;
+  }
+  .tools-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 720px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .tool-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5em;
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .tool-name {
+    font-family: var(--font-serif);
+    font-size: 1.1em;
+    font-weight: 400;
+    min-width: 130px;
+    color: var(--accent);
+  }
+  .tool-desc {
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+  }
+  @media (max-width: 600px) {
+    .tool-item {
+      flex-direction: column;
+      gap: 0.3em;
     }
   }
 </style>

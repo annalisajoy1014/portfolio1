@@ -37,6 +37,24 @@ const projects = [
     <div class="cover-bg" style="background-image: url('/images/site/anand-b5f0ea.png');"></div>
     <div class="cover-overlay"></div>
     <h1>A Narrative Design Portfolio</h1>
+    <p class="hero-tagline">I build branching worlds where every choice has weight — and write the stories that make players feel it.</p>
+  </section>
+
+  <section class="section play-section">
+    <h2 class="play-heading">Play My Work</h2>
+    <p class="play-sub">Interactive stories, playable in your browser. No install needed.</p>
+    <div class="play-cards">
+      <a href="/stories/sail-to-xhorhas-part-1?fullscreen=1" class="play-card">
+        <span class="play-icon" aria-hidden="true">▶</span>
+        <span class="play-title">Sail to Xhorhas, Part 1</span>
+        <span class="play-meta">Twine · branching narrative · multiple endings</span>
+      </a>
+      <a href="/stories/sail-to-xhorhas-part-2?fullscreen=1" class="play-card">
+        <span class="play-icon" aria-hidden="true">▶</span>
+        <span class="play-title">Sail to Xhorhas, Part 2</span>
+        <span class="play-meta">Twine · branching narrative · player-driven</span>
+      </a>
+    </div>
   </section>
 
   <section class="section centered philosophy">
@@ -108,8 +126,71 @@ const projects = [
 <style>
   .hero h1 {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 0.5em;
     font-weight: 400;
+  }
+  .hero-tagline {
+    font-family: var(--font-serif);
+    font-size: clamp(1.1em, 2vw, 1.4em);
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .play-section {
+    padding-top: 7vh;
+    padding-bottom: 5vh;
+    text-align: center;
+  }
+  .play-heading {
+    font-size: clamp(1.6em, 3vw, 2.2em);
+    font-weight: 400;
+    margin-bottom: 0.4em;
+  }
+  .play-sub {
+    font-size: 1.05em;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0 2.2em;
+  }
+  .play-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .play-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35em;
+    padding: 1.4em 2em;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.4em;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    min-width: 260px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .play-card:hover {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .play-icon {
+    font-size: 1.1em;
+    color: var(--accent);
+  }
+  .play-title {
+    font-family: var(--font-serif);
+    font-size: 1.15em;
+    font-weight: 400;
+  }
+  .play-meta {
+    font-size: 0.82em;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.03em;
   }
   .philosophy {
     padding-top: 6vh;
