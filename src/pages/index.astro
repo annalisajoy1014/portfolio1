@@ -86,36 +86,12 @@ const projects = [
     <ProjectGrid client:load projects={projects} />
   </section>
 
-  <section class="section two-col left-has-margin contact-section">
-    <div class="contact-left">
-      <p class="long-text">
-        I'm always happy to <strong>connect</strong>. Reach out with questions,
-        ideas, or project inquiries.
-      </p>
-      <ul class="tag-list">
-        <li>annalisa.j.ard@gmail.com</li>
-        <li>+1 (626) 696-6147</li>
-      </ul>
-    </div>
-    <form
-      class="contact-form"
-      action="https://formspree.io/f/xvgaorza"
-      method="POST"
-    >
-      <label>
-        <span class="sr-only">Your name</span>
-        <input type="text" name="name" placeholder="Your name" required />
-      </label>
-      <label>
-        <span class="sr-only">Your email</span>
-        <input type="email" name="email" placeholder="Your email" required />
-      </label>
-      <label>
-        <span class="sr-only">Your message</span>
-        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
-      </label>
-      <button type="submit" class="button">Send</button>
-    </form>
+  <section class="section contact-section">
+    <p class="long-text">
+      I'm always happy to <strong>connect</strong>. Reach out with questions,
+      ideas, or project inquiries.
+    </p>
+    <a class="contact-email" href="mailto:annalisa.j.ard@gmail.com">annalisa.j.ard@gmail.com</a>
   </section>
 
   <section class="section two-col closer-section">
@@ -226,47 +202,19 @@ const projects = [
     padding-top: 4vh;
     padding-bottom: 4vh;
   }
-  .contact-left .long-text {
-    margin-bottom: 1.1em;
-    text-align: left;
+  .contact-section .long-text {
+    margin-bottom: 1em;
   }
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2em;
-    width: 100%;
+  .contact-email {
+    font-family: var(--font-serif);
+    font-size: 1.4em;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
-  .contact-form label {
-    display: block;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 0.3em;
-    color: #fff;
-    font-family: inherit;
-    font-size: 1em;
-    padding: 0.8em 1em;
-    transition: border-color 0.2s ease, background 0.2s ease;
-  }
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    background: rgba(255, 255, 255, 0.14);
-  }
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.55);
-  }
-  .contact-form textarea {
-    resize: vertical;
-    min-height: 6em;
-  }
-  .contact-form .button {
-    align-self: flex-start;
+  .contact-email:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
   }
   .closer-right {
     text-align: right;
