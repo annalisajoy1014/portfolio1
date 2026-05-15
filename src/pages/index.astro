@@ -97,7 +97,11 @@ const projects = [
         <li>+1 (626) 696-6147</li>
       </ul>
     </div>
-    <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submission not yet wired up — see TODO note.');">
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/xvgaorza"
+      method="POST"
+    >
       <label>
         <span class="sr-only">Your name</span>
         <input type="text" name="name" placeholder="Your name" required />
